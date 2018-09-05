@@ -1,8 +1,10 @@
+--PONTOS DE REFERENCIA DO PROJETO
+ref_x = 0 -- ponto de referencia x
+ref_y = 0 -- ponto de referencia y
+
 --caracteristicas entreferro
 l_ef_y = 1 -- largura_ef_y
 l_ef_x = 1 -- largura_ef_x
-ref_x = 0 -- ponto de referencia x
-ref_y = 0 -- ponto de referencia y
 alt = 10 -- altura trafo
 lg = 10 -- largura trafo
 
@@ -17,8 +19,8 @@ alt_bit_2 = 6
 -- espaçamento entre o entreferro (ef) e a bobina (bN) 
 esp_ef_b1_x = 0.1
 esp_ef_b2_x = 0.2
-esp_ef_b1_y = alt/2 - l_ef_y - alt_bit_1
-esp_ef_b2_y = alt/2 - l_ef_y - alt_bit_1
+esp_ef_b1_y = ref_y + alt/2 - l_ef_y - alt_bit_1
+esp_ef_b2_y = ref_y + alt/2 - l_ef_y - alt_bit_1
 
 ------------ENTREFERRO------------------
 --coordenadas nós do entreferro
@@ -52,8 +54,31 @@ mi_addsegment(x2,y3,x2,y2)
 mi_addsegment(x1,y1,x1,y4)
 
 ------------BOBINA 1------------------
+--referencia = entrada da corrente esquerda
+--               saida da corrente direita
 --coordenadas entrada
-xbi1 = 
-xbi2 =
-xbi3 =
-xbi4 =
+x1_bi1 = ref_x - esp_ef_b1_x - lg_bit_1
+x2_bi1 = ref_x - esp_ef_b1_x
+y1_bi1 =  
+y2_bi1 = 
+
+--coordenadas saida
+x1_bo1 = 
+x2_bo1 = 
+y1_bo1 =  
+y2_bo1 = 
+
+------------BOBINA 2------------------
+--referencia = entrada da corrente esquerda
+--               saida da corrente direita
+--coordenadas entrada
+x1_bi2 = 
+x2_bi2 = 
+y1_bi2 =  
+y2_bi2 = 
+
+--coordenadas saida
+x1_bo2 = 
+x2_bo2 = 
+y1_bo2 =  
+y2_bo2 = 
